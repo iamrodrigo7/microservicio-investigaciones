@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  investigaciones-service:
+    build: .
+    container_name: investigaciones-container
+    ports:
+      - "5002:5002"
+    volumes:
+      - .:/app
+    networks:
+      - red-microservicios
+
+networks:
+  red-microservicios:
+    external: true
